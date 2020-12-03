@@ -8,18 +8,22 @@ function damageDealt() {
     document.getElementById("battleground-text").innerHTML = `You dealt ${currentEnemy.name} ${damageDealt} damage!`
     currentEnemy.health -= damageDealt;
     document.getElementById('enemy-health').innerHTML = `Health: ${currentEnemy.health}`
+    document.getElementById('player-combat-button').style.visibility = "hidden";
+    document.getElementById('combat-button').style.visibility = "visible";
 
-    if (currentEnemy.health <= damageDealt) {
+    if (currentEnemy.health <= 0) {
+        document.getElementById('player-combat-button').style.visibility = "hidden";
         currentEnemy.health = 0;
-        document.getElementById('enemy-health').innerHTML = "Dead.";
+        document.getElementById('battleground-text').innerHTML = `${currentEnemy.name} is dead!`;
         playerOne.exp += currentEnemy.exp;
         document.getElementById('player-exp').innerHTML = `EXP: ${playerOne.exp}`;
+        document.getElementById('combat-button').style.visibility = "hidden";
+        despawnEnemy();
     }
 }
 
 function damageReceived() {
-    //let damage = Math.floor(Math.random() * (8 - 3) + 3);
-    let damageTaken = (Math.floor(Math.random() * (6 - 3) + 3)) - playerOne.defense;
+    let damageTaken = currentEnemy.attack - playerOne.defense;
 
     if (damageTaken <= 0) {
         damageTaken = 0;
@@ -28,6 +32,8 @@ function damageReceived() {
     document.getElementById("battleground-text").innerHTML = `${currentEnemy.name} attacked! You took ${damageTaken} damage.`;
     playerOne.health -= damageTaken;
     document.getElementById("player-health").innerHTML = `Health: ${playerOne.health}`;
+    document.getElementById('player-combat-button').style.visibility = "visible";
+    document.getElementById('combat-button').style.visibility = "hidden";
 
     if (playerOne.health <= 0) {
         playerOne.health = 0;
