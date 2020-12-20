@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF=8" />
@@ -15,27 +15,37 @@
     <main>
         <div class="box-container">
             <h2 id="player-stats">Player Stats:</h2>
-                <p id="player-name"></p>
-                <p id="player-health"></p>
-                <p id="player-attack"></p>
-                <p id="player-defense"></p>
-                <p id="player-level"></p>
-                <p id="player-exp"></p>
-                <button id="player-combat-button" onclick="damageDealt()">Player Combat</button>
-                <button id="player-button" onclick="rerollPlayerStats()">Update Stats</button>
-                <button id="restart-button" onclick="restartGame()">Restart Game</button>
-            <h2 id="battleground">BATTLEGROUND</h2>
-                <h3 id="main-section"> Here you'll find the stats, storyline-progression, and any battle alerts! This is your main section.</h3>
-                <button id="combat-button" onclick="damageReceived()">Combat</button>
-                <p id="battleground-text"></p>
+               
+                    <p id="player-name"></p>
+                    <p id="player-class"></p>
+                    <p id="player-health"></p>
+                    <p id="player-attack"></p>
+                    <p id="player-defense"></p>
+                    <p id="player-level"></p>
+                    <p id="player-exp"></p>
+                    <img id="player-image" />
+                    <button id="player-combat-button" onclick="damageDealt()">Attack</button>
+                    <button id="player-button" onclick="rollPlayerStats()">Player Stats</button>
                 
+
+            <h2 id="battleground">BATTLEGROUND</h2>
+                
+                    <h3 id="main-section"> Here you'll find the stats, storyline-progression, and any battle alerts! This is your main section.</h3>
+                    <button id="combat-button" onclick="damageReceived()">Combat</button>
+                    <button id="restart-button" onclick="restartGame()">Restart Game</button>
+                    <p id="battleground-text"></p>
+                
+
             <h2 id="enemy-stats">Enemy Stats:</h2>
-                <p id="enemy-name"></p>
-                <p id="enemy-health"></p>
-                <p id="enemy-attack"></p>
-                <p id="enemy-defense"></p>
-                <p id="enemy-exp"></p>
-                <button id="enemy-button" onclick="enemyLoad()">Spawn Enemy</button>
+                
+                    <p id="enemy-name"></p>
+                    <p id="enemy-health"></p>
+                    <p id="enemy-attack"></p>
+                    <p id="enemy-defense"></p>
+                    <p id="enemy-exp"></p>
+                    <img id="enemy-image" />
+                    <button id="enemy-button" onclick="enemyLoad()">Spawn Enemy</button>
+                
         </div>
     </main>
 
@@ -46,7 +56,7 @@
     <script src="start-game.js"></script>
     <script src="damage.js"></script>
     <script src="enemy.js"></script>
-    <script src="player.js"></script>
+    <script src="player-classes.js"></script>
     <script src="restart.js"></script>
 </body>
 

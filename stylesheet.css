@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+
 h1, h2, #player-stats, #enemy-stats, #battleground {
     text-align: center;
 }
@@ -15,19 +16,15 @@ p {
 /* ----- BOX CONTAINER SECTION ------ */
 .box-container {
     display: grid;
-    grid-template-columns: 250px 800px 250px;
+    grid-template-columns: 25% 50% 25%;
     grid-template-rows: repeat(15, 25px);
 }
+
+
 
 #main-section {
     margin: 5px 10px 0 10px;
 }
-
-/* Included this code above with h1, h2 declaration block; save this to make sure it still works  
-    #player-stats, #battleground, #enemy-stats {
-        text-align: center;
-    } 
-*/
 
 #player-stats {
     grid-row: 1 / 2;
@@ -44,10 +41,9 @@ p {
 
 #enemy-stats {
     grid-row: 1 / 2;
-    grid-column: 3 / 3;
+    grid-column: 3 / 4;
     background: purple;
 }
-
 
 /*Player- and Enemy-Specific Containers */
 #player-health, #enemy-health {
@@ -59,13 +55,31 @@ p {
 }
 
 /* Player Specific Stats Display Section */
+
+#player-health, #player-defense, #player-exp {
+    justify-self: left;
+    padding-left: 5px;
+}
+
+#player-attack, #player-level {
+    justify-self: right;
+    padding-right: 10px;
+}
+
 #player-name {
+    padding-left: 5px;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
 
-#player-health {
+#player-class {
+    padding-left: 5px;
     grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+#player-health {
+    grid-row: 4 / 5;
     grid-column: 1 / 2;
 }
 
@@ -80,12 +94,19 @@ p {
 }
 
 #player-level {
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
     grid-column: 1 / 2;
 }
 
 #player-exp {
-    grid-row: 7 / 8;
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+}
+
+#player-image {
+    justify-self: center;
+    width: 125px;
+    grid-row: 7 / span 10;
     grid-column: 1 / 2;
 }
 
@@ -115,33 +136,43 @@ p {
     grid-column: 3 / 4;
 }
 
+#enemy-image {
+    justify-self: center;
+    width: 125px;
+    grid-row: 7 / span 10;
+    grid-column: 3 / 4;
+}
+
 /* ----- ALL BUTTONS ----- */
 #player-button {
-    grid-row: 7 / 8;
+    width: 50%;
+    justify-self: right;
+    grid-row: 14 / 15;
     grid-column: 1 / 2;
 }
 
 #player-combat-button {
-    width: 40px;
-    grid-row: 7 / 8;
+    width: 50%;
+    justify-self: left;
+    grid-row: 14 / 15;
     grid-column: 1 / 2;
 }
 
 #enemy-button {
-    grid-row: 7 / 8;
+    grid-row: 14 / 15;
     grid-column: 3 / 4;
 }
 
 #combat-button {
     justify-self: center;
-    width: 200px;
-    grid-row: 7 / 8;
+    width: 50%;
+    grid-row: 9 / 10;
     grid-column: 2 / 3;
 }
 
 #restart-button {
-    float: left; /* Not sure what this will do to the other in-line elements (i.e combat-button) */
-    width: 200px;
-    grid-row: 7 / 8;
+    justify-self: center;
+    width: 50%;
+    grid-row: 11 / 12;
     grid-column: 2 / 3;
 }
