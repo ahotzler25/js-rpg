@@ -1,0 +1,41 @@
+Changes made mid-flight:
+
+A) Index.html
+  1. Changed Player Stats button function from displayPlayerStats() >> rerollPlayerStats()
+  2. Changed Restart button function from rerollPlayerStats() >> restartGame();
+  3. Renamed Restart button element ID from "restart" >> "restart-button" (this follows naming convention of each other button)
+  4. Renamed javascript.js in <script> section >> start-game.js
+  5. Added damageDealt() to new button ("player-combat-button");
+  6. Added three IDs: player-level, player-exp, and enemy-exp
+
+
+B) stylesheet.css
+  1. Created restart-button CSS (double-check the layout as "float: left;" may mess with other in-line elements)
+  2. Combined declaration blocks so less messy/repetitious (saved code in case a bug occurs)
+  3. Gathered #player-attribute declaration blocks together
+  4. Moved #enemy-attribute declaration blocks together
+  5. Created CSS button for player-combat-button
+  6. Created declaration blocks for three IDs: player-level, player-exp, and enemy-exp
+
+C) javascript.js
+  1. Moved rerollPlayerStats() function to javascript.js file;
+	1a. Want to rename javascript.js file to player file or start game file
+  2. Renamed javascript.js >> start-game.js and corrected it on index.html
+  3. updated playerOne to include two new key-pairs: level and experience
+
+D) player.js
+  1. Commented out function, but may move all player code to that page in future
+
+E) damage.js
+  1. Coded a damageDealt() function to kill enemies
+    1a. Need to design exp gain system (add key/values to both player and enemies)
+  2. Added code to gain exp (killing enemy grants exp)
+    2a. Need to design how to store and calculate leveling up (new variable? Separate object?)
+
+F) enemy.js
+  1. Updated all enemies with exp key-pairs
+  2. "Evil Troy and Evil Abed" should be first boss (?)
+  3. Hardcoded remaining attributes for Bali Snake and Frenchmen (renamed "French Fucks" >> "Trevor's Frenchmen)
+  4. Added exp to each enemy
+  5. Should design system that looks at player exp level and switches from ENEMY array to BOSS array one time
+    5a. After victory or defeat, switch back to ENEMY array, at maybe a higher-level enemy array

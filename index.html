@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    
+    <title>JS RPG</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the main event!</h1>
+    </header>
+    <main>
+        <div class="box-container">
+            <h2 id="player-stats">Player Stats:</h2>
+                <p id="player-name"></p>
+                <p id="player-health"></p>
+                <p id="player-attack"></p>
+                <p id="player-defense"></p>
+                <p id="player-level"></p>
+                <p id="player-exp"></p>
+                <button id="player-combat-button" onclick="damageDealt()">Player Combat</button>
+                <button id="player-button" onclick="rerollPlayerStats()">Update Stats</button>
+                <button id="restart-button" onclick="restartGame()">Restart Game</button>
+            <h2 id="battleground">BATTLEGROUND</h2>
+                <h3 id="main-section"> Here you'll find the stats, storyline-progression, and any battle alerts! This is your main section.</h3>
+                <button id="combat-button" onclick="damageReceived()">Combat</button>
+                <p id="battleground-text"></p>
+                
+            <h2 id="enemy-stats">Enemy Stats:</h2>
+                <p id="enemy-name"></p>
+                <p id="enemy-health"></p>
+                <p id="enemy-attack"></p>
+                <p id="enemy-defense"></p>
+                <p id="enemy-exp"></p>
+                <button id="enemy-button" onclick="enemyLoad()">Spawn Enemy</button>
+        </div>
+    </main>
+
+    <footer>
+        <p id="testing-text"></p>
+        <p id="testing-text-2"></p>
+    </footer>
+    <script src="start-game.js"></script>
+    <script src="damage.js"></script>
+    <script src="enemy.js"></script>
+    <script src="player.js"></script>
+    <script src="restart.js"></script>
+</body>
+
+</html>
