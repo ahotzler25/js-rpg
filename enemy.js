@@ -1,20 +1,22 @@
-// Create Enemy Prototype Object
+// const enemies = [
+//     "Goblin" = {
+//         name: "Goblin",
+//         health: Math.floor(Math.random() * (12 - 3) + 3),
+//         attack: Math.floor(Math.random() * (6 - 2) + 2),
+//         defense: Math.floor(Math.random() * (3 - 1) + 1),
+//         exp: 8,
+//         img: "images/goblin.jpg"    
+//     },
+//     "Vulture" = {
+//         name: "Vulture",
+//         health: Math.floor(Math.random() * (12 - 4) + 4),
+//         attack: Math.floor(Math.random() * (7 - 2) + 2),
+//         defense: Math.floor(Math.random() * (4 - 1) + 1),
+//         exp: 12,
+//         img: "images/vulture.jpg"
+//     },
+// ]
 
-/*const Enemy = {
-    name: "",
-    health: Math.floor(Math.random() * (max - min) + min),
-    attack: 0,
-    defense: 0
-}*/
-
-/*Enemy object creation function
-
-function createEnemy(name, max, min) {
--- or --
-let enemyFive = new Enemy {this.name = name; this.health = health; this.attack = attack; this.defense = defense;}    
-}*/
-
-//Instead of "let enemyOne", I can use an array to store all the objects and access everything that way; much cleaner and easier
 let enemyOne = {
     name: "Goblin",
     health: Math.floor(Math.random() * (12 - 3) + 3),
