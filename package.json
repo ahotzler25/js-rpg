@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ahotzler25/js-rpg/issues"
   },
-  "homepage": "https://github.com/ahotzler25/js-rpg#readme"
+  "homepage": "https://github.com/ahotzler25/js-rpg#readme",
+  "dependencies": {
+    "d20": "^1.4.1"
+  }
 }

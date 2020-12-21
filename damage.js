@@ -1,3 +1,36 @@
+const d20 = require('d20');
+
+function charStats(d20) {
+
+    let finalCounter = 0;
+    const firstRoll = d20.roll('4d6', true);
+    console.log(firstRoll);
+    const secondRoll = d20.roll('4d6', true);
+    const thirdRoll = d20.roll('4d6', true);
+    const fourthRoll = d20.roll('4d6', true);
+    const fifthRoll = d20.roll('4d6', true);
+    const sixthRoll = d20.roll('4d6', true);
+
+    // console.log(totalRoll);
+    firstRoll.sort((a, b) => a > b ? -1 : 1);
+    
+    firstRoll.forEach((dice) => {
+        // let counter = 0;
+        for (let i = 0; i < 5; i++) {
+    
+            if (i <= 2) {
+                finalCounter += dice;
+            }
+        }
+    })
+
+    // let finalCounter = 0;
+    console.log(finalCounter);
+    console.log(`Your total score: ${firstRoll}`);
+}
+
+charStats(d20);
+
 function damageDealt() {
     let damageDealt = playerOne.attack - currentEnemy.defense;
 
